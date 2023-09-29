@@ -1,0 +1,131 @@
+# Les données d’entraînement NLU se composent d’exemples d’expressions de l’utilisateur classées par intention. Les exemples d’entraînement peuvent également inclure des entités.
+
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Bonjour 
+    - Salut 
+    - Coucou
+    - Bonsoir
+
+
+- intent: goodbye
+  examples: |
+    - Au revoir
+    - À plus tard 
+    - À demain
+    - À tout à l'heure
+    - bye
+    - Bonne soirée
+    - Prends soin de toi
+    - Bonne nuit
+    - bye bye
+    - Adieu 
+
+- intent: affirm
+  examples: |
+    - oui
+    - o
+    - Bien sûr
+    - bien
+    - correct
+    - ca va
+    - tranquille
+    - ok
+
+- intent: deny
+  examples: |
+    - non
+    - n
+    - jamais
+    - Je n'aime pas
+    - Pas possible
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+  
+- intent: giveName
+  examples: |
+    - Je m'appelle [Elise](nom)
+    - Mon nom est [Pierre](nom)
+    - je suis appelé [Camille](nom)
+    - vous pouvez m'appeler [Elise](nom)
+    - Je suis appelé [Claire](nom)
+    - Je suis [Elise](nom)
+    - Je m'appelle [Pierre](nom)
+    - Mon nom est [Elise](nom)
+    - je suis appelé [Claire](nom)
+    - vous pouvez m'appeler [Rachelle](nom)
+    - Je suis appelé [Sophie](nom)
+    - Je suis [Mathis](nom)
+    - Je m'appelle [Lucas](nom)
+    - Mon nom est [Alexandre](nom)
+    - je suis appelé [Nicolas](nom)
+    - vous pouvez m'appeler [Maxime](nom)
+    - Je suis appelé [Sarah](nom)
+    - Je suis [Sarah](nom)
+
+  
+- intent: RDV
+  examples: |
+    - listez moi mes rendez-vous
+    - donnez moi mes rendez-vous
+    - rendez-vous
+    - mes rendez-vous
+    - je veux voir le docteur
+    - c'est quand mon rendez-vous
+    - Quand est-ce que je vois le docteur
+    - a quelle date c'est mon rendez-vous
+    
+
+- intent: MED
+  examples: |
+    - Quel medicament dois-je prendre aujourd'hui ?
+    - mes medicaments
+    - medicament
+
+- intent: malade
+  examples: |
+    - Je ne me sens pas bien
+    - je me sens pas bien
+    - Je suis malade
+    - Je me sens faible
+    - J'ai du mal
+
+- intent: ACT
+  examples: |
+    - listez moi mes activites
+    - donnez moi mes activites
+    - mes activites
+    - activites
+    - je suis ennuyé
+    - je me suis ennuye
+    - je n'ai rien à faire
+
+- intent: meal
+  examples: |
+    - listez moi les repas
+    - j'ai faim
+    - faim
+    - je veux manger
+    - on va manger quand?
+    - quand on va manger?
+    - les repas
+    - repas
+    - je veux un repas
+
+- intent: give_mal
+  examples: |
+    - j'ai mal au dos
+    - j'ai mal à la gorge
+    - j'ai du mal à respirer
+    - mes jambes me font mal
+    - j'ai de la douleur au ventre

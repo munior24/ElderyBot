@@ -1,0 +1,22 @@
+#Rules sont un type de données d’entraînement utilisées pour entraîner le modèle de gestion de dialogue de votre assistant. Les règles fournissent une manière de décrire de courtes parties de conversations qui doivent toujours se dérouler de la même manière.
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Fallback response with LLM
+  steps:
+  - intent: nlu_fallback
+  - action: action_fallback
+
+
+

@@ -1,0 +1,70 @@
+#Le domaine définit l'univers dans lequel votre assistant opère. Il spécifie les intentions (intents), les entités (entities), les emplacements (slots), les réponses (responses), les formulaires (forms) et les actions que votre bot doit connaître.
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - giveName
+  - RDV
+  - MED
+  - ACT
+  - meal
+  - malade
+  - give_mal
+
+entities:
+  - nom
+
+
+
+slots:
+  nom: 
+    type: any
+    mappings:
+    - type: from_entity
+      entity: nom
+
+
+
+responses:
+  utter_greet:
+  - text: "Salut !"
+
+  utter_goodbye:
+  - text: "Prends soin de toi bye!!"
+
+  utter_alert:
+  - text: "<< Appelez l'infirmière (action) >>"
+
+  utter_askName:
+  - text: "Quel est votre nom ? "
+  
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_wait:
+  - text: "Attendez, l'infirmier va arriver tout de suite."
+
+  utter_dirnom:
+  - text: "Enchanté {nom}, comment je peux vous aidez aujourd'hui"
+
+  utter_malDetails:
+  - text: "Dis-moi, quel est le problème?"
+
+
+
+
+actions:
+  - action_Med
+  - action_RDV
+  - action_ACT
+  - action_meal
+  - action_call
+  - action_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

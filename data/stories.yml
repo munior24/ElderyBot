@@ -1,0 +1,54 @@
+#Les histoires représentent des données d’entraînement pour enseigner à votre assistant ce qu’il doit faire ensuite
+
+version: "3.1"
+
+stories:
+
+- story: Greeting & identification
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askName
+  - intent: giveName
+  - action: utter_dirnom
+
+- story: med yes & not feel good
+  steps:
+  - intent: MED
+  - action: action_Med
+  - intent: affirm
+  - action: utter_alert
+  - action: utter_wait
+
+- story: med no  & not feel good
+  steps:
+  - intent: MED
+  - action: action_Med
+  - intent: deny
+  - action: utter_alert
+  - action: utter_wait
+
+- story: appointment 
+  steps:
+  - intent: RDV
+  - action: action_RDV
+
+- story: activity 
+  steps:
+  - intent: ACT
+  - action: action_ACT
+
+- story: meals 
+  steps:
+  - intent: meal
+  - action: action_meal
+
+- story: malade 
+  steps:
+  - intent: malade
+  - action: utter_malDetails
+  - intent: give_mal
+  - action: action_call
+
+
+
